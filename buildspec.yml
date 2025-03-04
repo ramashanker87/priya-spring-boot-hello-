@@ -25,7 +25,7 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definition file
       # Give container name
-      - DOCKER_CONTAINER_NAME=spring-hello-ecr
+      - DOCKER_CONTAINER_NAME=priya-spring-hello-ecr
       - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo printing imagedefinitions.json
       - cat imagedefinitions.json
