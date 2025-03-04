@@ -6,7 +6,7 @@ phases:
       - echo Loggin to amazon ECR
       - aws --version
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 975050323630.dkr.ecr.us-east-1.amazonaws.com
-      - REPOSITORY_URI=975050323630.dkr.ecr.us-east-1.amazonaws.com/rama-spring-boot-hello
+      - REPOSITORY_URI=975050323630.dkr.ecr.us-east-1.amazonaws.com/priya-spring-boot-hello
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
